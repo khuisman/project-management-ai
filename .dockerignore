@@ -1,0 +1,11 @@
+.git
+*.log
+*.md
+!README.md
+.github
+.slack
+.vscode
+docker
+.env.example
+docker-compose.yml
+LICENSE
