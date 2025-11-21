@@ -34,9 +34,6 @@ services:
     volumes:
       - .:/serve
     #   - TOOLS=gmail drive calendar
-    depends_on:
-      postgres:
-        condition: service_healthy
     ports:
       - "3001:3000"
     networks:
