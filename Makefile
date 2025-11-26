@@ -6,43 +6,43 @@ help: ## Show this.
 
 .PHONY: sh
 sh: start ## Get a terminal with Bash.
-	docker compose exec loc-server bash
+	sudo docker compose exec loc-server bash
 
 .PHONY: start_langfuse
 start_langfuse: ## spin up the container
-	docker compose -f ./docker-compose-langfuse.yml up -d
+	sudo docker compose -f ./docker-compose-langfuse.yml up -d
 
 .PHONY: start_qdrant
 start_qdrant: ## spin up the container
-	docker compose -f ./docker-compose-qdrant.yml up -d
+	sudo docker compose -f ./docker-compose-qdrant.yml up -d
 
 .PHONY: start_workers
 start_workers: ## spin up the container
-	docker compose -f ./docker-compose-workers.yml up -d
+	sudo docker compose -f ./docker-compose-workers.yml up -d
 
 .PHONY: down_langfuse
 down_langfuse: ## spin up the container
-	docker compose -f ./docker-compose-langfuse.yml down
+	sudo docker compose -f ./docker-compose-langfuse.yml down
 
 .PHONY: down_qdrant
 down_qdrant: ## spin up the container
-	docker compose -f ./docker-compose-qdrant.yml down
+	sudo docker compose -f ./docker-compose-qdrant.yml down
 
 .PHONY: down_workers
 down_workers: ## spin up the container
-	docker compose -f ./docker-compose-workers.yml down
+	sudo docker compose -f ./docker-compose-workers.yml down
 
 .PHONY: logs_langfuse
 logs_langfuse: ## spin up the container
-	docker compose -f ./docker-compose-langfuse.yml logs -f
+	sudo docker compose -f ./docker-compose-langfuse.yml logs -f
 
 .PHONY: logs_qdrant
 logs_qdrant: ## spin up the container
-	docker compose -f ./docker-compose-qdrant.yml logs -f
+	sudo docker compose -f ./docker-compose-qdrant.yml logs -f
 
 .PHONY: logs_workers
 logs_workers: ## spin up the container
-	docker compose -f ./docker-compose-workers.yml logs -f
+	sudo docker compose -f ./docker-compose-workers.yml logs -f
 
 .PHONY: start
 .SILENT: start
