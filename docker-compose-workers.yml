@@ -29,7 +29,7 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     container_name: slackbot
-    entrypoint: ["tail", "-f", "/dev/null"]
+    #entrypoint: ["tail", "-f", "/dev/null"]
     env_file:
       - .env
     volumes:

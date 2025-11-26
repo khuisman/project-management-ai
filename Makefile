@@ -8,6 +8,10 @@ help: ## Show this.
 sh: start ## Get a terminal with Bash.
 	sudo docker compose -f ./docker-compose-workers.yml exec slackbot bash
 
+.PHONY: alembic
+alembic:
+	sudo docker compose -f ./docker-compose-workers exec slackbot bash -d "uv run alembic upgrade head"
+
 .PHONY: start_langfuse
 start_langfuse: ## spin up the container
 	sudo docker compose -f ./docker-compose-langfuse.yml up -d
