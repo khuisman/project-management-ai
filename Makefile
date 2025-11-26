@@ -6,7 +6,7 @@ help: ## Show this.
 
 .PHONY: sh
 sh: start ## Get a terminal with Bash.
-	sudo docker compose exec loc-server bash
+	sudo docker compose -f ./docker-compose-workers.yml exec slackbot bash
 
 .PHONY: start_langfuse
 start_langfuse: ## spin up the container
