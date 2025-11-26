@@ -10,7 +10,7 @@ sh: start ## Get a terminal with Bash.
 
 .PHONY: alembic
 alembic:
-	sudo docker compose -f ./docker-compose-workers exec slackbot bash -d "uv run alembic upgrade head"
+	sudo docker compose -f ./docker-compose-workers.yml exec slackbot bash -d "uv run alembic upgrade head"
 
 .PHONY: start_langfuse
 start_langfuse: ## spin up the container
